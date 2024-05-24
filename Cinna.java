@@ -26,6 +26,16 @@ public class Cinna extends Actor
         {
             CinnaWorld world = (CinnaWorld) getWorld();
             world.gameOver();
+            Greenfoot.stop();
+        }
+        
+        if(-10<downY&&10>downY)
+        {
+            setRotation(-20);
+        }
+        else if(10<downY)
+        {
+            setRotation(20);
         }
     }
 }
