@@ -8,14 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Cinna extends Actor
 {
-    int gravity = 2;
+    int gravity = 1;
     int downY = 0;
         public void act()
     {
-        setLocation(getX(), getY() + downY);
+        setLocation(getX(), (int)(getY() + downY));
         downY = gravity + downY;
         
         // Make Cinna jump
-        
+        if(Greenfoot.isKeyDown("up"))
+        {
+            downY=-8;
+        }
     }
 }
