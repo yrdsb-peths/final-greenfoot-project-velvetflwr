@@ -23,4 +23,9 @@ public class CinnaWorld extends World
         addObject(cinna, 100, getHeight()/2);
         
     }
+    public void gameOver()
+    {
+        GameOver gameover = new GameOver();
+        addObject(gameover, getWidth()/2, getHeight()/2);
+    }
 }

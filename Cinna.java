@@ -24,9 +24,7 @@ public class Cinna extends Actor
         
         if(getY()>getWorld().getHeight())
         {
-            GameOver gameOver = new GameOver();
-            getWorld().addObject(gameOver, getWorld().getWidth()/2, getWorld().getHeight()/2);
-            Greenfoot.stop();
+            getWorld().gameOver();
         }
     }
 }
