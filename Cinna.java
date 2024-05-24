@@ -24,7 +24,8 @@ public class Cinna extends Actor
         
         if(getY()>getWorld().getHeight())
         {
-            getWorld().gameOver();
+            CinnaWorld world = (CinnaWorld) getWorld();
+            world.gameOver();
         }
     }
 }
