@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class CinnaWorld extends World
 {
+    int count = 0;
 
     /**
      * Constructor for objects of class CinnaWorld.
@@ -22,6 +23,16 @@ public class CinnaWorld extends World
         Cinna cinna = new Cinna();
         addObject(cinna, 100, getHeight()/2);
         
+    }
+    
+    public void act()
+    {
+        count++;
+        if(count==100)
+        {
+            System.out.println(count);
+            count = 0;
+        }
     }
     public void gameOver()
     {
