@@ -30,12 +30,16 @@ public class CinnaWorld extends World
         count++;
         if(count==100)
         {
-            System.out.println(count);
+            //Create pipe
+            Tube tubey = new Tube();
+            addObject(tubey, getWidth(), getHeight()/2);
+            
             count = 0;
         }
     }
     public void gameOver()
     {
+        //Create gameover
         GameOver gameover = new GameOver();
         addObject(gameover, getWidth()/2, getHeight()/2);
     }
