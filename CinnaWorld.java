@@ -32,7 +32,9 @@ public class CinnaWorld extends World
         {
             //Create pipe
             Tube tubey = new Tube();
-            addObject(tubey, getWidth(), getHeight()/2);
+            
+            GreenfootImage image = tubey.getImage();
+            addObject(tubey, getWidth(), getHeight()/2 + image.getHeight()/2);
             
             count = 0;
         }
