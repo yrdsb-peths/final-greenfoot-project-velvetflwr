@@ -34,7 +34,7 @@ public class CinnaWorld extends World
             Tube tubey = new Tube();
             
             GreenfootImage image = tubey.getImage();
-            addObject(tubey, getWidth(), getHeight()/2 + image.getHeight()/2);
+            addObject(tubey, getWidth(), getHeight()/2 + image.getHeight()/-2);
             
             count = 0;
         }
