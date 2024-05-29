@@ -25,9 +25,7 @@ public class Cinna extends Actor
         //Game Over when Cinna falls out of the world
         if(getY()>getWorld().getHeight())
         {
-            CinnaWorld world = (CinnaWorld) getWorld();
-            world.gameOver();
-            Greenfoot.stop();
+            gameOverSign();
         }
         
         //Rotation animation
@@ -42,9 +40,14 @@ public class Cinna extends Actor
         
         if(getOneIntersectingObject(Tube.class) != null)
         {
-            CinnaWorld world = (CinnaWorld) getWorld();
-            world.gameOver();
-            Greenfoot.stop();
+            gameOverSign();
         }
+    }
+    
+    private void gameOverSign()
+    {
+        CinnaWorld world = (CinnaWorld) getWorld();
+        world.gameOver();
+        Greenfoot.stop();
     }
 }
