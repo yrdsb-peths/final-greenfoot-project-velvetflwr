@@ -11,7 +11,7 @@ public class Cinna extends Actor
     double gravity = .8;
     double downY = 0;
     double boost = -8.0;
-        public void act()
+    public void act()
     {
         setLocation(getX(), (int)(getY() + downY));
         downY = gravity + downY;
@@ -22,6 +22,7 @@ public class Cinna extends Actor
             downY=boost;
         }
         
+        //Game Over when Cinna falls out of the world
         if(getY()>getWorld().getHeight())
         {
             CinnaWorld world = (CinnaWorld) getWorld();
@@ -29,6 +30,7 @@ public class Cinna extends Actor
             Greenfoot.stop();
         }
         
+        //Rotation animation
         if(-10<downY&&10>downY)
         {
             setRotation(-20);
@@ -36,6 +38,13 @@ public class Cinna extends Actor
         else if(10<downY)
         {
             setRotation(20);
+        }
+        
+        if(getOneIntersectingObject(Tube.class) != null)
+        {
+            CinnaWorld world = (CinnaWorld) getWorld();
+            world.gameOver();
+            Greenfoot.stop();
         }
     }
 }
