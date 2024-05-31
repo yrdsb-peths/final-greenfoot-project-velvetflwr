@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class CinnaWorld extends World
 {
     int count = 0;
+    int GAP_DISTANCE = 20;
 
     /**
      * Constructor for objects of class CinnaWorld.
@@ -30,16 +31,14 @@ public class CinnaWorld extends World
         count++;
         if(count==100)
         {
-            buildTube();
-        }
-        //if(count==100)
-        {
             //Create pipe
-            //Tube tubey = new Tube();
+            Tube topPipe = new Tube();
+            Tube bottomPipe = new Tube();
             //int randomY = Greenfoot.getRandomNumber(100)-50;
-            //GreenfootImage image = tubey.getImage();
-            //addObject(tubey, getWidth(), getHeight()/2 + image.getHeight()/2 + randomY);
-            //addObject(tubey, getWidth(), getHeight()/2 + image.getHeight()/-2 + randomY +25);
+            GreenfootImage image = topPipe.getImage();
+            GreenfootImage bottomImage = bottomPipe.getImage();
+            addObject(topPipe, bottomPipe.getX(), bottomPipe.getY() - bottomPipe.getImage().getHeight() - GAP_DISTANCE);
+            addObject(bottomPipe, getWidth(), getHeight() + bottomPipe.getImage().getHeight()/2 - Greenfoot.getRandomNumber(300));
             count = 0;
         }
     }
