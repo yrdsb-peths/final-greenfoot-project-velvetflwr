@@ -30,14 +30,29 @@ public class CinnaWorld extends World
         count++;
         if(count==100)
         {
+            buildTube();
+        }
+        //if(count==100)
+        {
             //Create pipe
-            Tube tubey = new Tube();
-            int randomY = Greenfoot.getRandomNumber(100)-50;
-            GreenfootImage image = tubey.getImage();
-            addObject(tubey, getWidth(), getHeight()/2 + image.getHeight()/2 + randomY -25);
-            addObject(tubey, getWidth(), getHeight()/2 + image.getHeight()/-2 + randomY +25);
+            //Tube tubey = new Tube();
+            //int randomY = Greenfoot.getRandomNumber(100)-50;
+            //GreenfootImage image = tubey.getImage();
+            //addObject(tubey, getWidth(), getHeight()/2 + image.getHeight()/2 + randomY);
+            //addObject(tubey, getWidth(), getHeight()/2 + image.getHeight()/-2 + randomY +25);
             count = 0;
         }
+    }
+    
+    public void buildTube()
+    {
+        Tube top = new Tube();
+        Tube bottom = new Tube();
+        
+        GreenfootImage image = bottom.getImage();
+        
+        addObject(bottom, getWidth(), getHeight() + bottom.getImage().getHeight()/2 - Greenfoot.getRandomNumber(300));
+        
     }
     public void gameOver()
     {
