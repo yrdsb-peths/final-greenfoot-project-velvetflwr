@@ -8,12 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Tube2 extends Actor
 {
-    /**
-     * Act - do whatever the Tube2 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    int PIPE_SPEED = -4;
     public void act()
     {
-        // Add your action code here.
+        setLocation(getX() - PIPE_SPEED, getY());
     }
 }
