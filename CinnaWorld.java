@@ -34,13 +34,13 @@ public class CinnaWorld extends World
             //Create pipe
             Tube tube = new Tube();
             
-            //int randomY = Greenfoot.getRandomNumber(100)-50;
+            int randomY = Greenfoot.getRandomNumber(200)-50;
             GreenfootImage image = tube.getImage();
-            addObject(tube, getWidth(), getHeight()/2 - image.getHeight()/2 - Greenfoot.getRandomNumber(105));
+            addObject(tube, getWidth(), getHeight()/2 - image.getHeight()/2 - randomY);
             
             Tube2 tube2 = new Tube2();
             GreenfootImage image2 = tube2.getImage();
-            addObject(tube2, getWidth(), getHeight()/2 + image2.getHeight()/2 + Greenfoot.getRandomNumber(105));
+            addObject(tube2, getWidth(), getHeight()/2 + image2.getHeight()/2 + randomY);
         }
     }
     
