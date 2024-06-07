@@ -42,6 +42,11 @@ public class Cinna extends Actor
         {
             gameOverSign();
         }
+        
+        if(getOneIntersectingObject(Tube2.class) != null)
+        {
+            gameOverSign();
+        }
     }
     
     private void gameOverSign()
