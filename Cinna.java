@@ -10,7 +10,7 @@ public class Cinna extends Actor
 {
     double gravity = .8;
     double downY = 0;
-    double boost = -8.0;
+    double boost = -7.0;
     public void act()
     {
         setLocation(getX(), (int)(getY() + downY));
