@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.Color;
 /**
  * Write a description of class Score here.
  * 
@@ -11,6 +11,7 @@ public class Score extends Actor
     public Score()
     {
         GreenfootImage newImage = new GreenfootImage(100, 50);
+        newImage.setColor(Color.blue);
         setImage(newImage);
     }
     

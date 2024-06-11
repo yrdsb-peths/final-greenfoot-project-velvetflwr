@@ -47,11 +47,6 @@ public class Cinna extends Actor
         {
             gameOverSign();
         }
-        
-        if(getOneIntersectingObject(InvisibleCollider.class) != null)
-        {
-            //gameOverSign();
-        }
     }
     
     private void gameOverSign()

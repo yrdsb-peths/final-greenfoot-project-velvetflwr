@@ -9,11 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class CinnaWorld extends World
 {
     int count = 0;
+    int cinnaCount = 0;
     int GAP_DISTANCE = 20;
     int score = 0;
-    int FIRST_TUBE = 240;
-    Score score2 = null;
-    
+    int FIRST_PIPE = 231;
+    Score scoreCin = null;
 
     /**
      * Constructor for objects of class CinnaWorld.
@@ -23,17 +23,15 @@ public class CinnaWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false);
-        
+        setPaintOrder(Tube2.class, Tube.class, Cinna.class, GameOver.class, Score.class);
         // Create a Cinnamoroll
         Cinna cinna = new Cinna();
         addObject(cinna, 100, getHeight()/2);
         
         //Create score
-        Score score = new Score();
-        Score score2 = new Score();
-        addObject(score, 100, 100);
-        score2.addScore(0);
-        
+        scoreCin = new Score();
+        scoreCin.addScore(0);
+        addObject(scoreCin, 100, 100);
     }
     
     public void act()
@@ -42,11 +40,17 @@ public class CinnaWorld extends World
         if(count%100==0)
         {
             buildTube();
-            //InvisibleCollider collider = new InvisibleCollider();
-            //addObject(collider, getWidth(), getHeight()/2);
         }
         
-        if(count>= 
+        if(count>=FIRST_PIPE)
+        {
+            if(cinnaCount%100==0)
+            {
+                score++;
+                scoreCin.addScore(score);
+            }
+            cinnaCount++;
+        }
     }
     
     public void buildTube()
