@@ -10,6 +10,10 @@ public class CinnaWorld extends World
 {
     int count = 0;
     int GAP_DISTANCE = 20;
+    int score = 0;
+    int FIRST_TUBE = 240;
+    Score score2 = null;
+    
 
     /**
      * Constructor for objects of class CinnaWorld.
@@ -26,7 +30,9 @@ public class CinnaWorld extends World
         
         //Create score
         Score score = new Score();
+        Score score2 = new Score();
         addObject(score, 100, 100);
+        score2.addScore(0);
         
     }
     
@@ -35,20 +41,26 @@ public class CinnaWorld extends World
         count++;
         if(count%100==0)
         {
-            //Create pipe
-            Tube tube = new Tube();
-            
-            int randomY = Greenfoot.getRandomNumber(200)-50;
-            GreenfootImage image = tube.getImage();
-            addObject(tube, getWidth(), getHeight()/2 - image.getHeight()/2 - randomY);
-            
-            Tube2 tube2 = new Tube2();
-            GreenfootImage image2 = tube2.getImage();
-            addObject(tube2, getWidth(), getHeight()/2 + image2.getHeight()/2 - randomY +180);
-            
-            InvisibleCollider collider = new InvisibleCollider();
-            addObject(collider, getWidth(), getHeight()/2);
+            buildTube();
+            //InvisibleCollider collider = new InvisibleCollider();
+            //addObject(collider, getWidth(), getHeight()/2);
         }
+        
+        if(count>= 
+    }
+    
+    public void buildTube()
+    {
+        //Create tube for Cinna to pass through.
+        Tube tube = new Tube();
+            
+        int randomY = Greenfoot.getRandomNumber(200)-50;
+        GreenfootImage image = tube.getImage();
+        addObject(tube, getWidth(), getHeight()/2 - image.getHeight()/2 - randomY);
+            
+        Tube2 tube2 = new Tube2();
+        GreenfootImage image2 = tube2.getImage();
+        addObject(tube2, getWidth(), getHeight()/2 + image2.getHeight()/2 - randomY +180);
     }
     
     public void gameOver()
