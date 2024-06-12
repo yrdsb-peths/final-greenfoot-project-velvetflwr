@@ -23,15 +23,19 @@ public class CinnaWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false);
-        setPaintOrder(Cinna.class, GameOver.class, Score.class, Tube2.class, Tube.class);
+        setPaintOrder(GameOver.class, Cinna.class, Score.class, Tube2.class, Tube.class);
         // Create a Cinnamoroll
         Cinna cinna = new Cinna();
         addObject(cinna, 100, getHeight()/2);
         
+        //Create a Logo
+        Logo logoObject = new Logo();
+        addObject (logoObject, getWidth()/2, getHeight()*1/3);
+        
         //Create score
         scoreCin = new Score(0, 80);
         scoreCin.setValue(0);
-        addObject(scoreCin, 100, 100);
+        addObject(scoreCin, 50, 50);
     }
     
     public void act()
