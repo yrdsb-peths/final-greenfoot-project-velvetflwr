@@ -52,6 +52,7 @@ public class CinnaWorld extends World
     
     public void act()
     {
+        //Background music!
         music1Sound.playLoop();
         count++;
         //Create a tube every 100 pixels
@@ -89,26 +90,12 @@ public class CinnaWorld extends World
     
     public void gameOver()
     {
-        //Create gameover
+        //Create gameover. Program starts until you click reset
         GameOver gameover = new GameOver();
         addObject(gameover, getWidth()/2, getHeight()*1/3);
         TryAgain tryagain = new TryAgain("SCORE: " + score, 50);
         addObject(tryagain, 320, 290);
         Greenfoot.stop();
-        if(Greenfoot.isKeyDown("enter"))
-        {
-            Greenfoot.setWorld(new CinnaWorld());
-        }
-    }
-    
-    public void pause()
-    {
-        Greenfoot.stop();
-    }
-    
-    public void resume()
-    {
-        Greenfoot.start();
     }
     
 }
