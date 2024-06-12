@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Cinna extends Actor
 {
-    double gravity = .6;
+    double gravity = .5;
     double downY = 0;
     double boost = -7.0;
     public void act()
@@ -61,6 +61,6 @@ public class Cinna extends Actor
     {
         CinnaWorld world = (CinnaWorld) getWorld();
         world.gameOver();
-        Greenfoot.stop();
+        
     }
 }

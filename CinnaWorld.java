@@ -92,10 +92,23 @@ public class CinnaWorld extends World
         //Create gameover
         GameOver gameover = new GameOver();
         addObject(gameover, getWidth()/2, getHeight()*1/3);
-        
-        //Create score
         TryAgain tryagain = new TryAgain("SCORE: " + score, 50);
         addObject(tryagain, 320, 290);
+        Greenfoot.stop();
+        if(Greenfoot.isKeyDown("enter"))
+        {
+            Greenfoot.setWorld(new CinnaWorld());
+        }
+    }
+    
+    public void pause()
+    {
+        Greenfoot.stop();
+    }
+    
+    public void resume()
+    {
+        Greenfoot.start();
     }
     
 }

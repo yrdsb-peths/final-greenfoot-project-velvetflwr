@@ -16,6 +16,9 @@ public class GameOver extends Actor
     
     public void act()
     {
-        
+        if(Greenfoot.isKeyDown("enter"))
+        {
+            Greenfoot.setWorld(new CinnaWorld());
+        }
     }
 }
