@@ -9,17 +9,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class YouWon extends World
 {
 
-    /**
-     * Constructor for objects of class YouWon.
-     * 
-     */
+    GreenfootSound yaySound = new GreenfootSound("yay.mp3");
     public YouWon()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        //adding you won!!!
+        Instructions youWon = new Instructions("Great Job! You Won!!" , 40);
+        addObject(youWon, 400, 50);
         
-        Instructions youWon = new Instructions("Great Job! You Won!!" , 80);
-        addObject(youWon, 300, 100);
+        Instructions again = new Instructions("Play AGAIN?" , 30);
+        addObject(again, 500, 100);
         
+        
+    }
+    
+    public void act()
+    {
+        yaySound.play();
+        Greenfoot.stop();
     }
 }

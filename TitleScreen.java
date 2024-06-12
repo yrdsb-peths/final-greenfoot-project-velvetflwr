@@ -25,7 +25,7 @@ public class TitleScreen extends World
         Instructions instructions = new Instructions("Click \u2191 to make Cinna jump!", 30);
         addObject(instructions, getWidth()/2, 210);
         
-        Instructions instructions2 = new Instructions("♡ Obtain as many points as you can! ♡", 25);
+        Instructions instructions2 = new Instructions("♡ Obtain as many points as you can by passing tubes! ♡", 20);
         addObject(instructions2, getWidth()/2, 240);
         
         Instructions instructions3 = new Instructions("Press ENTER to start!", 25);

@@ -15,16 +15,6 @@ public class Instructions extends Actor
     
     private static final Color transparent = new Color(0,0,0,0);
 
-    public void act()
-    {
-        if (Greenfoot.isKeyDown("up")||Greenfoot.mouseClicked(null)||Greenfoot.isKeyDown("space")) 
-        {
-            World world;
-            world = getWorld();
-            world.removeObject(this);
-            
-        }
-    }
     /**
      * Create a new label, initialise it with the int value to be shown and the font size 
      */
