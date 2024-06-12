@@ -16,6 +16,7 @@ public class Cinna extends Actor
         setLocation(getX(), (int)(getY() + downY));
         downY = gravity + downY;
         
+           
         // Make Cinna jump
         if(Greenfoot.isKeyDown("up"))
         {
@@ -47,6 +48,11 @@ public class Cinna extends Actor
         {
             gameOverSign();
         }
+        //This makes sure Cinnamoroll can't pass out of the world up
+        if ((int)getY() <= 0){
+            setLocation(getX(), 0+20);
+            downY = 0;
+        }  
     }
     
     private void gameOverSign()
