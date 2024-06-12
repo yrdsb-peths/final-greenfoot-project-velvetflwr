@@ -61,6 +61,12 @@ public class CinnaWorld extends World
             }
             cinnaCount++;
         }
+        
+        if(score==100)
+        {
+            YouWon endWorld = new YouWon();
+            Greenfoot.setWorld(endWorld);
+        }
     }
     
     public void buildTube()
