@@ -1,13 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
- * Write a description of class Score here.
+ * Write a description of class TryAgain here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Score extends Actor
+public class TryAgain extends Actor
 {
-    // Wording design
     private String value;
     private int fontSize;
     private Color lineColor = Color.PINK;
@@ -17,7 +17,7 @@ public class Score extends Actor
     /**
      * Create a new label, initialise it with the int value to be shown and the font size 
      */
-    public Score(int value, int fontSize)
+    public TryAgain(int value, int fontSize)
     {
         this(Integer.toString(value), fontSize);
     }
@@ -25,7 +25,7 @@ public class Score extends Actor
     /**
      * Create a new label, initialise it with the needed text and the font size 
      */
-    public Score(String value, int fontSize)
+    public TryAgain(String value, int fontSize)
     {
         this.value = value;
         this.fontSize = fontSize;
@@ -84,4 +84,24 @@ public class Score extends Actor
     {
         setImage(new GreenfootImage(value, fontSize, fillColor, transparent, lineColor));
     }
+    
+    private int getHighScore(int highScore)
+    {
+        UserInfo usrObject = UserInfo.getMyInfo();
+        if(usrObject != null)
+        {
+            int currentHigh = usrObject.getInt(1);
+                       
+            if(highScore > currentHigh)
+            {
+                usrObject.setInt(1, highScore);
+                usrObject.store();
+                return highScore;
+            }
+            else return currentHigh;
+            
+        }
+        else return 0;
+    }
 }
+

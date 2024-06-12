@@ -39,6 +39,7 @@ public class Cinna extends Actor
             setRotation(20);
         }
         
+        //If Cinna hits either tubes, game over.
         if(getOneIntersectingObject(Tube.class) != null)
         {
             gameOverSign();
@@ -55,6 +56,7 @@ public class Cinna extends Actor
         }  
     }
     
+    //Game over sign pop up, and game stops
     private void gameOverSign()
     {
         CinnaWorld world = (CinnaWorld) getWorld();
