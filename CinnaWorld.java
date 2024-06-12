@@ -31,17 +31,6 @@ public class CinnaWorld extends World
         Cinna cinna = new Cinna();
         addObject(cinna, 100, getHeight()/2);
         
-        //Create a Logo
-        Logo logoObject = new Logo();
-        addObject (logoObject, getWidth()/2, getHeight()*1/3);
-        
-        //Create instructions
-        Instructions instructions = new Instructions("Click \u2191 to make Cinna jump!", 30);
-        addObject(instructions, getWidth()/2, 250);
-        
-        Instructions instructions2 = new Instructions("♡ Obtain as many points as you can! ♡", 25);
-        addObject(instructions2, getWidth()/2, 290);
-        
         //Create score
         scoreCin = new Score(0, 80);
         scoreCin.setValue(0);
