@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class CinnaWorld extends World
 {
     GreenfootSound pointSound = new GreenfootSound("points.mp3");
+    GreenfootSound music1Sound = new GreenfootSound("points.mp3");
     int count = 0;
     int cinnaCount = 0;
     int GAP_DISTANCE = 20;
@@ -32,6 +33,9 @@ public class CinnaWorld extends World
         //Create a Logo
         Logo logoObject = new Logo();
         addObject (logoObject, getWidth()/2, getHeight()*1/3);
+        
+        Instructions instructions = new Instructions("Click \u2191 to make Cinna jump!", 30);
+        addObject(instructions, getWidth()/2, getHeight()*2/3);
         
         //Create score
         scoreCin = new Score(0, 80);
