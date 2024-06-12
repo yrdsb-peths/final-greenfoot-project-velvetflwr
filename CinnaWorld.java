@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class CinnaWorld extends World
 {
+    GreenfootSound pointSound = new GreenfootSound("points.mp3");
     int count = 0;
     int cinnaCount = 0;
     int GAP_DISTANCE = 20;
@@ -52,6 +53,7 @@ public class CinnaWorld extends World
             {
                 score++;
                 scoreCin.setValue(score);
+                pointSound.play();
             }
             cinnaCount++;
         }
