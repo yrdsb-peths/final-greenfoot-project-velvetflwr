@@ -5,3 +5,10 @@ A Flappy Bird inspired game with a cuter theme, and the main character being Cin
 
 ---------------
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
+
+CREDITS:
+--------
+
+[https://www.deviantart.com/karasuneth/art/Cinnamoroll-Giftscop-Naulsheet-Spritesheet-835734091]
+
+[https://in.pinterest.com/]
