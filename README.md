@@ -9,10 +9,14 @@ A Flappy Bird inspired game with a cuter theme, and the main character being Cin
 CREDITS:
 --------
 
-[https://www.deviantart.com/karasuneth/art/Cinnamoroll-Giftscop-Naulsheet-Spritesheet-835734091]
+[https://www.deviantart.com/karasuneth/art/Cinnamoroll-Giftscop-Naulsheet-Spritesheet-835734091] (CINNA SPRITE)
 
-[https://in.pinterest.com/]
+[https://in.pinterest.com/] (PNGS USED)
 
-[https://www.iloveimg.com/crop-image]
+[https://www.iloveimg.com/crop-image] (CROPPING IMAGES)
 
-[https://onlinepngtools.com/pixelate-png]
+[https://onlinepngtools.com/pixelate-png] (PIXELATING IMAGES)
+
+[https://fontmeme.com/text-generator/] (LOGO)
+
+[https://www.remove.bg/] (REMOVE BACKGROUND)
