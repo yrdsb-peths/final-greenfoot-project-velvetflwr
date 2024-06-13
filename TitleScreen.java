@@ -31,6 +31,9 @@ public class TitleScreen extends World
         Instructions instructions3 = new Instructions("Press ENTER to start!", 25);
         addObject(instructions3, getWidth()/2, 280);
         
+        Instructions instructions4 = new Instructions("* Obtain a score of 100 to get a surprise *", 20);
+        addObject(instructions4, getWidth()/2, 360);
+        
         CinnaTitle cinnatitle = new CinnaTitle();
         addObject(cinnatitle, getWidth()/2, 320);
     }

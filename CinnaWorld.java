@@ -35,6 +35,7 @@ public class CinnaWorld extends World
         scoreCin = new Score(0, 80);
         scoreCin.setValue(0);
         addObject(scoreCin, 50, 50);
+        
     }
     
     
