@@ -12,3 +12,7 @@ CREDITS:
 [https://www.deviantart.com/karasuneth/art/Cinnamoroll-Giftscop-Naulsheet-Spritesheet-835734091]
 
 [https://in.pinterest.com/]
+
+[https://www.iloveimg.com/crop-image]
+
+[https://onlinepngtools.com/pixelate-png]
